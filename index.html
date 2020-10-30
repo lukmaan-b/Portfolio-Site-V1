@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Lukmaan</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <section id="intro">
+      <div class="header">
+        <h1>Hi, im Lukmaan & im a web developer</h1>
+        <div class=""><i></i></div>
+      </div>
+      <div class="blob-container">
+        <svg
+          width="1700"
+          viewBox="40 25 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="#FF0066"
+            d="M40.6,-51.1C52.1,-38.9,60.3,-25.5,61.8,-11.6C63.4,2.2,58.4,16.5,50.9,29.5C43.5,42.5,33.8,54.2,19.9,62.7C6,71.3,-11.9,76.7,-24.9,70.9C-37.8,65.1,-45.8,48,-51.6,32.4C-57.5,16.8,-61.4,2.7,-58.5,-9.7C-55.6,-22.2,-46,-32.8,-35.2,-45.1C-24.3,-57.4,-12.2,-71.3,1.2,-72.7C14.6,-74.2,29.2,-63.2,40.6,-51.1Z"
+            transform="translate(100 100)"
+          />
+        </svg>
+
+        <svg
+          width="1400"
+          viewBox="0 25 300 300"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="#FF0066"
+            d="M36.6,-43.6C46.7,-35.2,53.7,-22.9,56.7,-9.5C59.8,4,58.8,18.7,54.1,35.2C49.3,51.6,40.7,69.8,27.5,74C14.3,78.1,-3.5,68.2,-22.4,61.4C-41.4,54.6,-61.5,50.9,-71.2,38.8C-80.8,26.8,-80,6.4,-72.6,-8.9C-65.3,-24.3,-51.5,-34.6,-38.3,-42.5C-25.1,-50.4,-12.6,-55.9,0.3,-56.3C13.3,-56.8,26.5,-52.1,36.6,-43.6Z"
+            transform="translate(100 100)"
+          />
+        </svg>
+        <svg
+          width="1600"
+          viewBox="0 25 300 300"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="#FF0066"
+            d="M36.6,-43.6C46.7,-35.2,53.7,-22.9,56.7,-9.5C59.8,4,58.8,18.7,54.1,35.2C49.3,51.6,40.7,69.8,27.5,74C14.3,78.1,-3.5,68.2,-22.4,61.4C-41.4,54.6,-61.5,50.9,-71.2,38.8C-80.8,26.8,-80,6.4,-72.6,-8.9C-65.3,-24.3,-51.5,-34.6,-38.3,-42.5C-25.1,-50.4,-12.6,-55.9,0.3,-56.3C13.3,-56.8,26.5,-52.1,36.6,-43.6Z"
+            transform="translate(100 100)"
+          />
+        </svg>
+      </div>
+      <ul class="socials">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+    <section id="projects">
+      <div class="blob-container"></div>
+      <div class="grid">
+        <div class="card"></div>
+      </div>
+    </section>
+    <section id="about">
+      <h1>Here are some things about me</h1>
+      <div>
+        <p>I am a programmer at heart.</p>
+        <img src="" alt="" />
+      </div>
+      <div>
+        <p>I graduate from City University with a 1st</p>
+        <img src="" alt="" />
+      </div>
+      <div>
+        <p>
+          I love learning new web technologies to advance my skills as a
+          developer
+        </p>
+        <img src="" alt="" />
+      </div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const blobs = document.querySelectorAll('.blob-container > svg');
+      anime({
+        targets: blobs[0],
+        keyframes: [
+          {
+            scale: getRandomValue(0.5, 1),
+            translateX: `${getRandomValue(-20, 100)}vw`,
+            translateY: `${getRandomValue(-20, 50)}vh`,
+            rotate: getRandomValue(-20, 160),
+          },
+          {
+            scale: getRandomValue(0.5, 1),
+            translateX: `${getRandomValue(-20, 30)}vw`,
+            translateY: `${getRandomValue(0, 10)}vh`,
+            rotate: getRandomValue(-20, 360),
+          },
+          {
+            scale: getRandomValue(0.5, 1),
+            translateX: `${getRandomValue(0, 60)}vw`,
+            translateY: `${getRandomValue(0, 70)}vh`,
+            rotate: getRandomValue(-20, 160),
+          },
+          {
+            scale: getRandomValue(0.3, 1),
+            translateX: `${getRandomValue(-20, 100)}vw`,
+            translateY: `${getRandomValue(60, 90)}vh`,
+            rotate: getRandomValue(-20, 360),
+          },
+        ],
+        duration: getRandomValue(10000, 30000),
+        loop: true,
+        easing: 'easeInOutSine',
+        direction: 'alternate',
+      });
+      anime({
+        targets: blobs[1],
+        keyframes: [
+          {
+            scale: getRandomValue(0.5, 1),
+            translateX: `${getRandomValue(50, -100)}vw`,
+            translateY: `${getRandomValue(0, 100)}vh`,
+            rotate: getRandomValue(-20, 160),
+          },
+          {
+            scale: getRandomValue(0.5, 1),
+            translateX: `${getRandomValue(30, -70)}vw`,
+            translateY: `${getRandomValue(0, 50)}vh`,
+            rotate: getRandomValue(-20, 360),
+          },
+          {
+            scale: getRandomValue(0.5, 1),
+            translateX: `${getRandomValue(0, -60)}vw`,
+            translateY: `${getRandomValue(0, 70)}vh`,
+            rotate: getRandomValue(-20, 160),
+          },
+          {
+            scale: getRandomValue(0.3, 1),
+            translateX: `${getRandomValue(-20, 100)}vw`,
+            translateY: `${getRandomValue(60, 90)}vh`,
+            rotate: getRandomValue(-20, 360),
+          },
+        ],
+        duration: getRandomValue(10000, 30000),
+        loop: true,
+        easing: 'easeInOutSine',
+        direction: 'alternate',
+      });
+      anime({
+        targets: blobs[2],
+        keyframes: [
+          {
+            scale: getRandomValue(0.5, 1),
+            translateX: `${getRandomValue(-20, -100)}vw`,
+            translateY: `${getRandomValue(-20, 50)}vh`,
+            rotate: getRandomValue(-20, 160),
+          },
+          {
+            scale: getRandomValue(0.5, 1),
+            translateX: `${getRandomValue(-20, -30)}vw`,
+            translateY: `${getRandomValue(0, 10)}vh`,
+            rotate: getRandomValue(-20, 360),
+          },
+          {
+            scale: getRandomValue(0.5, 1),
+            translateX: `${getRandomValue(0, -60)}vw`,
+            translateY: `${getRandomValue(0, 70)}vh`,
+            rotate: getRandomValue(-20, 160),
+          },
+          {
+            scale: getRandomValue(0.3, 1),
+            translateX: `${getRandomValue(-20, -100)}vw`,
+            translateY: `${getRandomValue(60, 90)}vh`,
+            rotate: getRandomValue(-20, 360),
+          },
+        ],
+        duration: getRandomValue(10000, 30000),
+        loop: true,
+        easing: 'easeInOutSine',
+        direction: 'alternate',
+      });
+      function getRandomValue(min, max) {
+        console.log(Math.floor(Math.random() * (max * 2 + 1)) - min);
+        return Math.floor(Math.random() * (max * 2 + 1)) + min;
+      }
+    </script>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+            result="goo"
+          />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+body {
+  overflow-x: hidden;
+}
+#intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blob-container {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  filter: url('#goo');
+}
+
+.blob-container > svg {
+  position: absolute;
+  /* animation: goop infinite alternate 5s ease-in-out; */
+}
+.blob-container > svg:nth-of-type(2n) {
+  left: 80%;
+}
+.blob-container > svg:nth-of-type(3n) {
+  left: 50%;
+  top: 70%;
+}
+
+#projects {
+  height: 100vh;
+  background-color: aliceblue;
+}
